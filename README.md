@@ -22,7 +22,7 @@ var port = process.env.PORT || 8080;
 
 var cors_proxy = require('cors-anywhere');
 cors_proxy.createServer({
-    originWhitelist: [], // Allow all origins
+        originWhitelist: ['https://abfstg.sharepoint.com/sites/ABFI','https://localhost:4321/temp/workbench.html','https://abfoods.sharepoint.com/sites/abi-pulse', 'https://localhost:4321/'],
     requireHeader: ['origin', 'x-requested-with'],
     removeHeaders: ['cookie', 'cookie2']
 }).listen(port, host, function() {
