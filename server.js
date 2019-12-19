@@ -22,7 +22,7 @@ var checkRateLimit = require('./lib/rate-limit')(process.env.CORSANYWHERE_RATELI
 var cors_proxy = require('./lib/cors-anywhere');
 cors_proxy.createServer({
   originBlacklist: originBlacklist,
-  originWhitelist: ['https://abfstg.sharepoint.com/sites/ABFI','https://localhost:4321/temp/workbench.html','https://abfoods.sharepoint.com/sites/abi-pulse', 'https://localhost:4321', 'https://abfoods.sharepoint.com/sites/abi-pulse', 'https://abfoods.sharepoint.com/sites/abi-hub', 'https://abfoods.sharepoint.com/sites/abe-hub', 'https://abfoods.sharepoint.com/sites/abt-hub', 'https://abfoods.sharepoint.com/sites/ohl-hub', 'https://abfoods.sharepoint.com/sites/pgp-hub', 'https://abfoods.sharepoint.com/sites/spi-hub'],
+  originWhitelist: ['https://bpkintelogydev.sharepoint.com/sites/ABFI','https://abfstg.sharepoint.com/sites/ABFI','https://localhost:4321/temp/workbench.html','https://abfoods.sharepoint.com/sites/abi-pulse', 'https://localhost:4321', 'https://abfoods.sharepoint.com/sites/abi-pulse', 'https://abfoods.sharepoint.com/sites/abi-hub', 'https://abfoods.sharepoint.com/sites/abe-hub', 'https://abfoods.sharepoint.com/sites/abt-hub', 'https://abfoods.sharepoint.com/sites/ohl-hub', 'https://abfoods.sharepoint.com/sites/pgp-hub', 'https://abfoods.sharepoint.com/sites/spi-hub'],
   requireHeader: ['origin', 'x-requested-with'],
   checkRateLimit: checkRateLimit,
   removeHeaders: [
